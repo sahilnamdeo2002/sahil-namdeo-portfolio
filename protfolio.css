@@ -1,0 +1,616 @@
+*
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'poppins',sans-serif;
+}
+body{
+    color: white;
+    background: #081b29;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px,10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    position: relative;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    /* opacity: 0; */
+    animation: slideRight is ease forwards;
+
+}
+.navbar a{
+    display: inline-block;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    /* opacity: 0; */
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+.navbar a:hover{
+color: blue;
+}
+.home{
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    background: url(./images/background.png.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 70px  20% 0;
+}
+.homecontent{
+    max-width: 1000px;
+}
+.homecontent h3{
+    font-size: 32px;
+    font-weight: 700;
+    /* opacity: 0; */
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+
+}
+.homecontent h3:nth-of-type(2){
+    margin-bottom: 30px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
+
+}
+.homecontent h3 span{
+color: #0ef;
+}
+.homecontent h1{
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    /* opacity: 0; */
+    animation: slideRight 1s ease forwards;
+    animation-delay: .7s;
+}
+.homecontent p {
+    font-size: 20px;
+    /* opacity: 0; */
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s ;
+}
+.homescience a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    transition: .5s ease;
+    /* opacity: 0; */
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+    margin: 30px 15px 30px 0;
+ 
+}
+.homescience a:hover{
+    background: #0ef;
+    color: black;
+    box-shadow: 0 0 20px #0ef;
+}
+.btnbox{
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    /* opacity: 0; */
+    animation: slideTop is ease forwards;
+    animation-delay:2s;
+    box-shadow: 0 0 5px #0ef;
+
+}
+.btnbox:hover{
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan , 0 0 50px cyan,
+    0 0 100px cyan, 0 0 200px cyan ;
+}
+.about{
+    /* color: red; */
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+    gap: 1.5rem;
+    /* padding-bottom: 6rem; */
+}
+.aboutimg img{
+    padding: 20%;
+    max-width: 700px;
+    height: auto;
+    width: 100%;
+    border-radius:8px ;
+}
+.abouttext h2{
+    font-size: 60px;
+    color: #0ef;
+}
+.abouttext h2 span{
+    color: #0ef;
+}
+.abouttext p{
+    color: #fff;
+    font-size:20px;
+    font-weight: 600;
+    line-height: 1.4;
+
+    margin-bottom: 4rem;
+}
+.abouttext h4{
+    font-size: 29px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+.container{
+    padding: 90px;
+}
+#service{
+    color: white;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+.subtitle span{
+  color: #0ef;
+
+}
+.subtitle{
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 70px;
+}
+.servicetitle{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(259px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+
+}
+.servicetitle div{
+    background-color: transparent;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 13px;
+    border-right: 10px;
+    border-radius: 20px;
+    transition: background ,0.5s,transform 0.5s;
+    box-shadow: 1px 1px 20px #012290f7,
+                1px 1px 40px #0053b8f7;
+}
+.servicetitle div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.servicetitle div h2{
+    font-size:50px;
+    font-weight:500;
+    margin-bottom: 15px;
+
+}
+.servicetitle div a{
+    text-decoration: none;
+    color: #00000000;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.read{
+ display: inline-block;
+ padding: 12px 28px;
+ background: #0ef;
+ border-radius: 40px;
+ font-size: 16px;
+ color: black;
+ letter-spacing: 1px;
+ text-decoration: none;
+ font-weight: 600;
+ /* opacity: 0; */
+ animation: slideTop 1s ease forwards;
+ animation-delay: 2s;
+ box-shadow: 0 0 50px #0ef, 
+ 0 0 25px #0ef
+
+}
+.read:hover{
+    /* background: #0ef;
+    color: black; */
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan , 0 0 50px cyan,
+    0 0 100px cyan, 0 0 200px cyan ;
+}
+.servicetitle div:hover{
+    transform: translateY(-10px);
+    color: #0ef;
+}
+
+
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+/* -------------------- */
+
+
+.container1 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.heading1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.technicalbars {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+}
+
+.bar i {
+    font-size: 2em;
+    margin-right: 20px;
+}
+
+.info {
+    flex: 1;
+    font-size: 1.2em;
+}
+
+.progressline {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    overflow: hidden;
+    
+
+}
+
+.progressline span {
+    position: absolute;
+    height: 100%;
+    background-color: #4caf50; /* Default progress bar color */
+    width: 0; /* Start with 0 width */
+    border-radius: 5px;
+    transition: width 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 0.8em;
+
+    
+
+}
+
+/* Custom widths for each skill */
+.html span {
+    width: 90%; /* Example: HTML skill level */
+    background-color: orangered; /* HTML bar color */
+
+
+}
+
+.css span {
+    width: 80%; /* Example: CSS skill level */
+    background-color: #14d3e0; /* CSS bar color */
+}
+
+.js span {
+    width: 70%; /* Example: JavaScript skill level */
+    background-color: yellow; /* JavaScript bar color */
+    color: black; /* Contrast for yellow background */
+}
+
+.react span {
+    width: 85%; /* Example: React skill level */
+    background-color: #14d3e0; /* React bar color */
+}
+
+.python span {
+    width: 75%; /* Example: Python skill level */
+    background-color: #14d3e0; /* Python bar color */
+}
+
+
+/* -------------------- */
+
+
+@keyframes showText{
+    100%{
+        opacity: 1;
+    }
+}
+/* .radialbars{
+    width: 100%;
+    display: flex;
+    height: 170px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.radialbars .radialbar{
+    width: 50%;
+    height: 170px;
+    margin-bottom: 10px;
+    position: inherit;
+}
+.radialbars .radialbar svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)rotate(-90deg);
+    width: 120px;
+    height: 160px;
+}
+.radialbars .radialbar .progressbar{
+    stroke-width: 10;
+    stop-color: black;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animatebar 1s linear forwards;
+} */
+
+
+
+
+.container1 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.heading1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.radialbars {
+    display: inline-block;
+    margin: 20px;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+}
+
+.radialbars svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(-90deg); /* Start progress at the top */
+}
+
+.radialbars .progressbar {
+    fill: none;
+    stroke: black;
+    stroke-width: 15;
+}
+
+.radialbars .path {
+    fill: none;
+    stroke-width: 15;
+    stroke: #14d3e0; /* Default progress color */
+    stroke-dasharray: 502.4; /* 2 * π * r (approx.) */
+    stroke-dashoffset: 502.4;
+    transition: stroke-dashoffset 1s ease-in-out;
+}
+
+.radialbars .percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #4caf50; /* Same as progress color */
+}
+
+.radialbars .text {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2em;
+    color: white;
+}
+
+/* Hover Effect */
+.radialbars:hover .path {
+    stroke:palegoldenrod; /* Change progress color on hover */
+    transition: stroke-dashoffset 1s ease-in-out, stroke 0.3s ease-in-out;
+}
+
+.radialbars:hover .percentage {
+    color: red; /* Change percentage text color on hover */
+}
+
+/* Custom progress for each bar */
+.radialbars:nth-child(1) .path {
+    stroke-dashoffset: calc(502.4 - (502.4 * 70) / 100); /* 90% progress */
+}
+
+.radialbars:nth-child(2) .path {
+    stroke-dashoffset: calc(502.4 - (502.4 * 90) / 100); /* 85% progress */
+}
+
+.radialbars:nth-child(3) .path {
+    stroke-dashoffset: calc(502.4 - (502.4 * 80) / 100); /* 80% progress */
+}
+
+.radialbars:nth-child(4) .path {
+    stroke-dashoffset: calc(502.4 - (502.4 * 90) / 100); /* 75% progress */
+}
+
+.radialbars:nth-child(5) .path {
+    stroke-dashoffset: calc(502.4 - (502.4 * 70) / 100); /* 70% progress */
+}
+
+
+
+
+
+
+
+
+@keyframes animatebar{
+    100%{
+        stroke-dashoffset: -1;
+    }
+}
+.path{
+    stroke-width: 10;
+    stroke: #0ef;
+    fill: transparent;
+    stroke-dashoffset: 582;
+    stroke-dashoffset: 582;
+    stroke-linecap: round;
+}
+.path1{animation: animatepath1 1s 1s linear forwards;}
+.path2{animation: animatepath2 1s 1s linear forwards;}
+.path3{animation: animatepath3 1s 1s linear forwards;}
+.path4{animation: animatepath4 1s 1s linear forwards;}
+
+@keyframes animatepath1{
+    100%{
+        stroke-dashoffset: 50;
+    }
+}
+@keyframes animatepath2{
+    100%{
+        stroke-dashoffset: 175;
+    }
+}   
+@keyframes animatepath3{
+    100%{
+        stroke-dashoffset: 125;
+    }
+}  
+@keyframes animatepath4{
+    100%{
+        stroke-dashoffset: 75;
+    }
+}  
+/* .radialbar.pecentage{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showtext 0.5s 1s linear forwards;
+    
+} */
+
+
+
+
+
+
+
+
+
+
+
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+
+@keyframes slideLeft{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideTop{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideBottom {
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes animate{
+    100%{
+        transform: scaleX(1);
+
+    }
+}
+
