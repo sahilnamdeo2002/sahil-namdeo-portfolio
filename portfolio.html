@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="protfolio.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="shortcut icon" type:"faviconx-icon" href="images/abab.png">
+    <link rel="shortcut icon" type:"faviconx-icon" href="./images//favicon1.png">
 </head>
 
 <body>
@@ -17,10 +17,11 @@
         <!-- <a href="#" class="logo">Portfolio</a> -->
         <nav class="navbar ">
             <a href="#" style="--i:1" class="active">Home</a>
-            <a onclick="myfunction3()"  href="#" style="--i:2">About</a>
+            <a  href="#projects" style="--i:5">Projects</a>
             <a onclick="myfunction1()" href="#" style="--i:3">Resume</a>
             <a onclick="myfunction()" href="#" style="--i:4">Certificates</a>
-            <a onclick="myfunction2() " href="#" style="--i:5">Contact</a>
+            <a href="#timeline" style="--i:5">Work Experience</a>
+            <a onclick="myfunction3()"  href="#" style="--i:2">About</a>
         </nav>
     </header>
     <section class="home">
@@ -38,7 +39,7 @@
                         class='bx bxl-linkedin-square'></i></a>
 
             </div>
-            <a href="#" class="btnbox">More About Me</a>
+            <a href="#" onclick="myfunction1()" class="btnbox">More About Me</a>
         </div>
         <span class="homeimghover"></span>
     </section>
@@ -116,7 +117,7 @@
     <h1 class="subtitle">MY <span style="color: #0ef;">SKILLS</span></h1>
     <section>
         <div class="container1" id="skills">
-            <h1 class="heading1">TECHNICAL SKILLS</h1>
+            <h1 class="heading1" style="color: white;">TECHNICAL <span style="color: #0ef;">SKILLS</span></h1>
             <div class="technicalbars">
                 <div class="bar"><i class='bx bxl-html5' style='color:orangered'></i>
                     <div class="info">
@@ -178,8 +179,11 @@
         </div>
 
 
+        </section>
+        <section>
+
         <div class="container1">
-            <h1 class="heading1">PROFESSIONAL SKILLS</h1>
+            <h1 class="heading1" style="color: white;">PROFESSIONAL <p>SKILLS</p></h1>
             <div class="radialbars">
                <svg x="0" y="0px" viewBox="0 0 200 200">
                 <circle class="progressbar" cx="100" cy="100" r="80"></circle>
@@ -225,8 +229,219 @@
 
 
     </section>
+<!-- ----------------------------------------------------------------------------------------------- -->
+<!-- // project -->
+
+<section class="projects" id="projects">
+    <div class="container">
+        <h1 class="subtitle">My <span>Projects</span></h1>
+        <div class="project-cards">
+            <div class="card">
+                <img src="images/chat app.png" alt="Project 1">
+                <h2>Project Title 1</h2>
+                <p>Brief description of the project. This can include the technologies used, the purpose of the project, and any notable features.</p>
+                <a  target="_blank" href="https://664899d19e6c50c9c8b18985--taupe-sherbet-1ea366.netlify.app/" class="btnbox">View Project</a>
+            </div>
+
+            <div class="card">
+                <img src="images/ecommce photo.png" alt="Project 2">
+                <h2>Project Title 2</h2>
+                <p>Brief description of the project. This can include the technologies used, the purpose of the project, and any notable features.</p>
+                <a  target="_blank" href="https://github.com/sahilnamdeo2002/MERN-ECOMMERCE-WEBSITE.git" class="btnbox">View Project</a>
+            </div>
+
+            <div class="card">
+                <img src="images/cart app.png" alt="Project 3">
+                <h2>Project Title 3</h2>
+                <p>Brief description of the project. This can include the technologies used, the purpose of the project, and any notable features.</p>
+                <a  target="_blank" href="https://react-cart-mu-three.vercel.app/
+                " class="btnbox">View Project</a>
+            </div>
+        </div>
+    </div>
+</section>
 
 
+<!-- ----------------------------------------------------------------------------------------------- -->
+
+
+
+
+<section>
+    <div class="timeline" id="timeline">
+        <h1>Work Experience</h1>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h2>Frontend Developer</h2>
+                <h3>Oasis InfoByte | May 2023 - June 2023</h3>
+                <p>
+                    <ul>
+                        <li>Developed a number of landing pages using frontend technologies like HTML/CSS and JavaScript.</li>
+                        <li>Implemented responsive design and ensured cross-browser compatibility.</li>
+                        <li>Executed these projects and documented them on LinkedIn through detailed blog posts.</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h2>Cloud Developer</h2>
+                <h3>Cisco-Adex | Year 2022</h3>
+                <p>Participated in the Cisco Virtual Internship, gaining valuable hands-on experience and expanding my perspective in the dynamic field of Cloud.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h2>Growth Manager</h2>
+                <h3>PrepInsta | 2023-2024</h3>
+                <p>
+                    <ul>
+                        <li>Involved in fundamental marketing activities, contributing to the promotion and visibility of the platform.</li>
+                        <li>Committed to learning and applying foundational marketing techniques to help PrepInsta reach a broader audience and provide valuable educational resources to its users.</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h2>Core Lead</h2>
+                <h3>Entrepreneurship Cell, GEC | 2022 - Present</h3>
+                <p>Played a key role in the planning and execution of various events promoting entrepreneurship spirit and innovation at GEC.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- ----------------------------------------------------------------------------------------------- -->
+
+
+
+
+<style>
+ 
+
+    .form-container {
+        margin-left: 35%;
+        width: 400px;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+        position: relative;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #333;
+        transition: color 0.3s ease;
+    }
+
+    input[type="text"], input[type="email"], input[type="tel"] {
+        width: 100%;
+        padding: 12px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        transition: border-color 0.3s ease;
+    }
+
+    input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus {
+        border-color: #007bff;
+        outline: none;
+    }
+
+    input[type="text"]:focus + label, input[type="email"]:focus + label, input[type="tel"]:focus + label {
+        color: #007bff;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+        padding: 12px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #0056b3;
+        transform: translateY(-2px);
+    }
+
+    button[type="submit"]:active {
+        transform: translateY(0);
+    }
+</style>
+<section>
+    <div class="form-container">
+        <form>
+            <div class="form-group">
+                <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
+                <label for="username">Username</label>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="contact" placeholder="Enter your contact" required>
+                <label for="contact">Contact</label>
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                <label for="email">Email address</label>
+            </div>
+            <div class="form-group">
+                <input type="tel" class="form-control" id="contactNumber" placeholder="Enter your contact number" required>
+                <label for="contactNumber">Contact Number</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</section>
+
+
+<br>
+<!-- ------------------------------------------------------------------------- -->
+<section>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 SAHIL NAMDEO. All Rights Reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.youtube.com/channel/UCNqOHKCZeQ0zVwqHM49JUaQ"><i class='bx bxl-youtube'></i></a>
+                <a href="https://www.instagram.com/sahillnamdeo"><i class='bx bxl-instagram'></i></a>
+                <a href="https://github.com/sahilnamdeo2002"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/sahil-namdeo-3410b9226/"><i class='bx bxl-linkedin'></i></a>
+            </div>
+        </div>
+    </footer>
+</section>
 
     <script src="main.js"></script>
 </body>

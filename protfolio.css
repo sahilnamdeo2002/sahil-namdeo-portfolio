@@ -1,10 +1,17 @@
-*
-{
+*{
 margin: 0;
 padding: 0;
 box-sizing: border-box;
 font-family: 'poppins',sans-serif;
 }
+
+
+#skills {
+    padding: 50px 0;
+    background-image: url(./images/last.png.png);
+}
+
+
 body{
     color: white;
     background: #081b29;
@@ -33,20 +40,44 @@ body{
 
 }
 .navbar a{
-    display: inline-block;
-    font-size: 25px;
-    color: #fff;
     text-decoration: none;
-    font-weight: 500;
-    margin-left: 35px;
-    transition: .3s;
-    /* opacity: 0; */
-    animation: slideTop .5s ease forwards;
-    animation-delay: calc(.2s * var(--i));
+    color: rgba(255, 255, 255, 0.8); /* White color with transparency */
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    position: relative;
 }
-.navbar a:hover{
-color: blue;
+
+.navbar a:hover {
+    color: rgb(15, 152, 221);; /* Hover color with transparency */
+
+  }
+
+  .navbar a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: rgb(15, 152, 221);; /* Underline color with transparency */
+    transition: all 0.3s ease;
 }
+
+.navbar a:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+.navbar a.active {
+    color: rgb(15, 152, 221);
+}
+
+
+
+
+  
 .home{
     position: relative;
     width: 100%;
@@ -276,14 +307,21 @@ section{
     margin: 0 auto;
     padding: 20px;
 }
+.container1 h1 p{
+    color:#14d3e0;
+ 
+}
 
 .heading1 {
     text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 20px;
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #333;
 }
 
 .technicalbars {
+    max-width: 800px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -293,46 +331,125 @@ section{
 .bar {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.bar:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 .bar i {
-    font-size: 2em;
+    font-size: 40px;
     margin-right: 20px;
+    transition: transform 0.3s ease;
+}
+.bar:hover i {
+    transform: rotate(360deg);
 }
 
-.info {
-    flex: 1;
-    font-size: 1.2em;
+.info span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
 }
 
 .progressline {
     position: relative;
-    width: 100%;
+    width: 70%;
     height: 10px;
-    background-color: #f3f3f3;
+    background-color: #e0e0e0;
     border-radius: 5px;
     overflow: hidden;
+    transition: background-color 0.3s ease;
     
 
 }
 
 .progressline span {
     position: absolute;
-    height: 100%;
-    background-color: #4caf50; /* Default progress bar color */
-    width: 0; /* Start with 0 width */
-    border-radius: 5px;
-    transition: width 0.5s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
+    top: -25px;
+    right: 0;
+    font-size: 14px;
     font-weight: bold;
-    font-size: 0.8em;
+    color: #333;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 
     
 
 }
+.bar:hover .progressline span {
+    opacity: 1;
+}
+
+.progressline.html::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 90%;
+    background-color: orangered;
+    border-radius: 5px;
+    animation: fillProgress 2s ease-out;
+}
+
+
+.progressline.css::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 80%;
+    background-color: #14d3e0;
+    border-radius: 5px;
+    animation: fillProgress 2s ease-out;
+}
+.progressline.js::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 90%;
+    background-color: yellow;
+    border-radius: 5px;
+    animation: fillProgress 2s ease-out;
+}
+
+.progressline.react::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 80%;
+    background-color: #14d3e0;
+    border-radius: 5px;
+    animation: fillProgress 2s ease-out;
+}
+
+.progressline.python::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 90%;
+    background-color: #14d3e0;
+    border-radius: 5px;
+    animation: fillProgress 2s ease-out;
+}
+
+/* Animation for progress bars */
+@keyframes fillProgress {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(--width);
+    }
+}
+
+
+
+
 
 /* Custom widths for each skill */
 .html span {
@@ -372,37 +489,6 @@ section{
         opacity: 1;
     }
 }
-/* .radialbars{
-    width: 100%;
-    display: flex;
-    height: 170px;
-    margin-bottom: 10px;
-    position: relative;
-}
-.radialbars .radialbar{
-    width: 50%;
-    height: 170px;
-    margin-bottom: 10px;
-    position: inherit;
-}
-.radialbars .radialbar svg{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%)rotate(-90deg);
-    width: 120px;
-    height: 160px;
-}
-.radialbars .radialbar .progressbar{
-    stroke-width: 10;
-    stop-color: black;
-    fill: transparent;
-    stroke-dasharray: 502;
-    stroke-dashoffset: 502;
-    stroke-linecap: round;
-    animation: animatebar 1s linear forwards;
-} */
-
 
 
 
@@ -422,85 +508,120 @@ section{
     display: inline-block;
     margin: 20px;
     position: relative;
-    width: 200px;
-    height: 200px;
-    text-align: center;
 }
 
 .radialbars svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: rotate(-90deg); /* Start progress at the top */
+    width: 150px;
+    height: 150px;
+    transform: rotate(-90deg);
 }
 
-.radialbars .progressbar {
+.progressbar {
     fill: none;
-    stroke: black;
+    stroke: #2e2e4d;
     stroke-width: 15;
 }
 
-.radialbars .path {
+ .path {
     fill: none;
     stroke-width: 15;
-    stroke: #14d3e0; /* Default progress color */
-    stroke-dasharray: 502.4; /* 2 * π * r (approx.) */
-    stroke-dashoffset: 502.4;
-    transition: stroke-dashoffset 1s ease-in-out;
+    stroke-linecap: round;
+    stroke-dasharray: 502; /* 2 * Math.PI * 80 */
+    stroke-dashoffset: 502;
+    animation: progress 2s ease-out forwards;
+    transition: stroke 0.3s ease;
 }
 
-.radialbars .percentage {
+.path-1 {
+    stroke: #6c63ff;
+}
+
+.percentage {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 1.5em;
     font-weight: bold;
-    color: #4caf50; /* Same as progress color */
 }
 
-.radialbars .text {
-    position: absolute;
-    bottom: -30px;
-    left: 50%;
-    transform: translateX(-50%);
+ .text {
+    margin-top: 20px;
     font-size: 1.2em;
-    color: white;
+    transition: color 0.3s ease;
 }
 
 /* Hover Effect */
 .radialbars:hover .path {
-    stroke:palegoldenrod; /* Change progress color on hover */
-    transition: stroke-dashoffset 1s ease-in-out, stroke 0.3s ease-in-out;
+    stroke: #f5a623;
 }
-
-.radialbars:hover .percentage {
-    color: red; /* Change percentage text color on hover */
-}
-
-/* Custom progress for each bar */
-.radialbars:nth-child(1) .path {
-    stroke-dashoffset: calc(502.4 - (502.4 * 70) / 100); /* 90% progress */
-}
-
-.radialbars:nth-child(2) .path {
-    stroke-dashoffset: calc(502.4 - (502.4 * 90) / 100); /* 85% progress */
-}
-
-.radialbars:nth-child(3) .path {
-    stroke-dashoffset: calc(502.4 - (502.4 * 80) / 100); /* 80% progress */
-}
-
-.radialbars:nth-child(4) .path {
-    stroke-dashoffset: calc(502.4 - (502.4 * 90) / 100); /* 75% progress */
-}
-
-.radialbars:nth-child(5) .path {
-    stroke-dashoffset: calc(502.4 - (502.4 * 70) / 100); /* 70% progress */
+.radialbars:hover .text {
+    color: #f5a623;
 }
 
 
 
+@keyframes progress {
+    0% {
+        stroke-dashoffset: 502;
+    }
+    100% {
+        stroke-dashoffset: calc(502 - (502 * 70) / 100); /* Replace 70 with the actual percentage value */
+    }
+}
+
+/* Specific animations for each skill percentage */
+.radialbars:nth-child(1) .path-1 {
+    animation: progress1 2s ease-out forwards;
+}
+
+.radialbars:nth-child(2) .path-1 {
+    animation: progress2 2s ease-out forwards;
+}
+
+.radialbars:nth-child(3) .path-1 {
+    animation: progress3 2s ease-out forwards;
+}
+
+.radialbars:nth-child(4) .path-1 {
+    animation: progress4 2s ease-out forwards;
+}
+
+@keyframes progress1 {
+    0% {
+        stroke-dashoffset: 502;
+    }
+    100% {
+        stroke-dashoffset: calc(502 - (502 * 70) / 100); /* 70% progress */
+    }
+}
+
+@keyframes progress2 {
+    0% {
+        stroke-dashoffset: 502;
+    }
+    100% {
+        stroke-dashoffset: calc(502 - (502 * 90) / 100); /* 90% progress */
+    }
+}
+
+@keyframes progress3 {
+    0% {
+        stroke-dashoffset: 502;
+    }
+    100% {
+        stroke-dashoffset: calc(502 - (502 * 80) / 100); /* 80% progress */
+    }
+}
+
+@keyframes progress4 {
+    0% {
+        stroke-dashoffset: 502;
+    }
+    100% {
+        stroke-dashoffset: calc(502 - (502 * 90) / 100); /* 90% progress */
+    }
+}
 
 
 
@@ -614,3 +735,294 @@ section{
     }
 }
 
+
+
+
+
+/* Projects Section */
+.projects {
+    padding: 50px 0;
+    background-image: url(./images/last.png.png);
+}
+
+.projects .subtitle {
+    text-align: center;
+    font-size:40px;
+    margin-bottom: 30px;
+    color: white;
+
+}
+
+.projects .project-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.projects .card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.projects .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.projects .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.projects .card:hover img {
+    transform: scale(1.1);
+}
+
+.projects .card h2 {
+    font-size: 24px;
+    margin: 15px;
+    color: #333;
+}
+
+.projects .card p {
+    font-size: 16px;
+    margin: 15px;
+    color: #666;
+}
+
+.projects .card .btnbox {
+    display: block;
+    text-align: center;
+    margin: 15px;
+    padding: 10px 0;
+    background-color: #14d3e0;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.projects .card .btnbox:hover {
+    background-color: #0aa9b1;
+}
+
+
+
+
+/* work experience  */
+.work-experience {
+    padding: 50px 0;
+    background-color: #f4f4f4;
+}
+
+.work-experience .subtitle {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.experience-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.experience-cards .card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+    text-align: center;
+}
+
+.experience-cards .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 50px rgba(0, 0, 0, 0.2);
+}
+
+.experience-cards .card h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #0ef;
+}
+
+.experience-cards .card h3 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.experience-cards .card .duration {
+    display: block;
+    margin-bottom: 15px;
+    font-style: italic;
+    color: #555;
+}
+
+.experience-cards .card p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------ */
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+    padding-left: 40px;
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: scale(1.05);
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #6c63ff;
+    border-radius: 50%;
+    top: 10px;
+    z-index: 1;
+}
+
+.timeline-content {
+    background-color: #2e2e4d;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.timeline-content:hover {
+    background-color: #6c63ff;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+h3 {
+    margin: 5px 0 15px 0;
+    font-size: 1.2em;
+    color: #cccccc;
+}
+
+p {
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .timeline-item {
+        padding-left: 20px;
+    }
+
+    .timeline-dot {
+        left: -10px;
+    }
+}
+
+
+
+
+
+
+
+
+/* -------------- */
+/* FOOTER */
+/* Footer Styles */
+.footer {
+    background-color: rgba(8,27,41,255);
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-content {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-direction: column; */
+    color: #fff;
+}
+
+.footer-content p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.footer-content .social-icons {
+    margin-top: 10px;
+}
+
+.footer-content .social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-content .social-icons a:hover {
+    transform: scale(1.2);
+}
+
+/* Animation */
+.footer {
+    animation: slideUp 0.5s ease-in-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
